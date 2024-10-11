@@ -14,7 +14,8 @@
 
 -- placeholder contents...
 print 'Post-Dacpac Deployment Script Starting'
-
+GO
 print 'Doing nothing...'
-
+GO
 print 'Post-Dacpac Deployment Script Completed'
+ 

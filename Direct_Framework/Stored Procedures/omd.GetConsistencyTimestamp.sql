@@ -329,7 +329,7 @@ BEGIN TRY
     IF @Debug = 'Y'
      PRINT @localSqlStatement;
 
-    EXECUTE sp_executesql @localSqlStatement, N'@localSourceMaxDateTime DATETIME2(7) OUTPUT', @localSourceMaxDateTime = @localSourceMaxDateTime OUTPUT
+    EXECUTE dbo.sp_executesql @localSqlStatement, N'@localSourceMaxDateTime DATETIME2(7) OUTPUT', @localSourceMaxDateTime = @localSourceMaxDateTime OUTPUT
 
     IF @Debug = 'Y'
      PRINT 'High water mark (localSourceMaxDateTime) in source table is: ' + CONVERT(VARCHAR(20), @localSourceMaxDateTime);
